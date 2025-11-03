@@ -8,6 +8,7 @@ class Truck extends Vehicle {
         this.loadCapacity = loadCapacity;
         this.numberOfAxles = numberOfAxles;
     }
+
     @Override
     public void displayVehicleInfo() {
         System.out.println("\n___Truck Information___");
@@ -17,6 +18,12 @@ class Truck extends Vehicle {
         System.out.println("Base Price: $" + basePrice);
         System.out.println("Load Capacity: " + loadCapacity + " tons");
         System.out.println("Number of Axles: " + numberOfAxles);
+    }
+
+    @Override
+    public double computeRentalCost(int days) {
+
+        return super.computeRentalCost(days) * 1.2 + (loadCapacity * 1.2 * days);
     }
 
 
