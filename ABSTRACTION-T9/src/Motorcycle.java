@@ -18,4 +18,15 @@
         System.out.println("Engine CC: " + engineCC);
         System.out.println("Includes Helmet: " + (hasHelmet ? "Yes" : "No"));
     }
+    @Override
+    public double computeRentalCost(int days) {
+
+        double cost = super.computeRentalCost(days)* 0.9;
+        if (hasHelmet) {
+            cost += 3 * days;
+        }
+        return cost;
+
+
+    }
 }
