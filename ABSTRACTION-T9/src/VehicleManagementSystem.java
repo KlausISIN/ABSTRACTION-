@@ -35,8 +35,9 @@ public class VehicleManagementSystem {
             System.out.println(days + " day(s): $" + String.format("%.2f", truck.computeRentalCost(days)));
         }
 
+
         System.out.println("\nThank you for using our Vehicle Management System!");
-        System.out.println("==================================================");
+        System.out.println("===================================================");
 
     }
 }
